@@ -1,0 +1,23 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "muebleriaHermanosJota",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MatiasKV0/HermanosJota.git"
+  },
+  "author": "Matias",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MatiasKV0/HermanosJota/issues"
+  },
+  "homepage": "https://github.com/MatiasKV0/HermanosJota#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
