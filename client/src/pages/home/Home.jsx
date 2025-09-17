@@ -9,9 +9,9 @@ export default function home() {
               <p>
                 Cada pieza cuenta la historia de manos expertas y materiales nobles
               </p>
-              <a href="productos/productos.html" class="btn-primary">
+              <link to="productos/productos.html" class="btn-primary">
                 Descubrir Colección
-              </a>
+              </link>
             </div>
             <img
               src="public/img/AparadorUspallata.png"
@@ -23,9 +23,9 @@ export default function home() {
           <section id="destacados" class="destacados">
             <h2>Piezas Destacadas</h2>
             <div class="destacados-content"></div>
-            <a href="productos/productos.html" class="btn-secondary">
+            <link to="productos/productos.html" class="btn-secondary">
               Explorar más creaciones
-            </a>
+            </link>
           </section>
 
           <section id="about" class="about-us">
@@ -81,9 +81,9 @@ export default function home() {
                 <cite>— Juan L.</cite>
               </blockquote>
             </div>
-            <a href="contacto/contacto.html" class="btn-secondary">
+            <link to="contacto/contacto.html" class="btn-secondary">
               Déjanos tu opinión
-            </a>
+            </link>
           </section>
         </main>
         )

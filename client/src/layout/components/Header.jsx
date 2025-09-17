@@ -3,20 +3,20 @@ import './header.css'
 export default function Header()    {
     return (
         <header className="header">
-            <a href="index.html">
+            <link to="index.html">
             <img src="public/img/logo.svg" alt="Mueblería Hermanos Jota Logo" />
-          </a>
+          </link>
           <nav>
             <ul>
-              <li><a href="index.html">Inicio</a></li>
-              <li><a href="productos/productos.html">Productos</a></li>
-              <li><a href="contacto/contacto.html">Contacto</a></li>
+              <li><link to="index.html">Inicio</link></li>
+              <li><link to="productos/productos.html">Productos</link></li>
+              <li><link to="contacto/contacto.html">Contacto</link></li>
             </ul>
           </nav>
-          <a href="carrito/carrito.html" id="carrito-icon">
+          <link to="carrito/carrito.html" id="carrito-icon">
             <span id="carrito-total"></span>
             <img src="public/img/cart.svg" alt="Carrito de Compras" />
-          </a>
+          </link>
         </header>
         )
 }

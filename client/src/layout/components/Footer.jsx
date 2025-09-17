@@ -17,9 +17,9 @@ export default function Footer () {
           </div>
           <div>
             <ul>
-              <li><a href="index.html">Inicio</a></li>
-              <li><a href="productos/productos.html">Productos</a></li>
-              <li><a href="contacto/contacto.html">Contacto</a></li>
+              <li><link to="index.html">Inicio</link></li>
+              <li><link to="productos/productos.html">Productos</link></li>
+              <li><link to="contacto/contacto.html">Contacto</link></li>
             </ul>
           </div>
           <div>
