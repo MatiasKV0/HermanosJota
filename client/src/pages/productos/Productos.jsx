@@ -1,4 +1,6 @@
-function productos() {
+import './productos.css'
+
+export default function productos() {
     return (
         <main className="productos">
             <div class="layout">

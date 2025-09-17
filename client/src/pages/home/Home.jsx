@@ -1,4 +1,6 @@
-function home() {
+import './home.css'
+
+export default function home() {
     return (
         <main className="home">
                 <section id="hero" class="hero">

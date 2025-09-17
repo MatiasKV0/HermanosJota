@@ -1,4 +1,6 @@
-function Contacto() {
+import './contacto.css'
+
+export default function Contacto() {
     return (
         <main className="contacto">
           <h1>Conectemos</h1>

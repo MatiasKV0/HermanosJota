@@ -1,4 +1,6 @@
-function Carrito() {
+import './carrito.css'
+
+export default function Carrito() {
     return (
         <main className="carrito">
             <h1 className="carrito">Tu Carrito</h1>

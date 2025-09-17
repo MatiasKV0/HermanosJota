@@ -1,4 +1,6 @@
-function Header()    {
+import './header.css'
+
+export default function Header()    {
     return (
         <header className="header">
             <a href="index.html">
