@@ -1,0 +1,24 @@
+{
+  "name": "hermanosjota",
+  "version": "1.0.0",
+  "description": "Este proyecto corresponde a la **consigna final de los Sprints 3 y 4 (NEXUS)**.  \r El objetivo es reconstruir el frontend de la tienda **Mueblería Hermanos Jota** con **React**, y desarrollar un backend con **Node.js + Express** que sirva como API para gestionar los productos.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MatiasKV0/HermanosJota.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MatiasKV0/HermanosJota/issues"
+  },
+  "homepage": "https://github.com/MatiasKV0/HermanosJota#readme",
+  "dependencies": {
+    "dotenv": "^17.2.2",
+    "express": "^5.1.0"
+  }
+}
