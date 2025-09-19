@@ -1,0 +1,336 @@
+/* Main */
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: left;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+
+p {
+  font-weight: 400;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  margin: auto;
+  max-width: 1200px;
+  min-height: 90dvh;
+  padding: 0rem 1rem;
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 600px;
+}
+
+.hero-content h1 {
+  margin-bottom: 1.5rem;
+  text-shadow: 0 2px 4px rgba(160, 82, 45, 0.1);
+}
+
+.hero-content p {
+  font-size: 1.3rem;
+  color: var(--colorprimario);
+  font-weight: 300;
+  margin: 2rem 0;
+  font-style: italic;
+}
+
+.hero-img {
+  flex: 1;
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(160, 82, 45, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.hero-img:hover {
+  transform: translateY(-5px);
+}
+
+/* Botones */
+.btn-primary,
+.btn-secondary {
+  font-family: "Inter", system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 2rem;
+  transition: all 0.3s ease;
+  border: 2px solid var(--colorprimario);
+}
+
+.btn-primary {
+  background: var(--colorprimario);
+  color: var(--colorfondo);
+}
+
+.btn-primary:hover {
+  background: var(--colordetallesoro);
+  border-color: var(--colordetallesoro);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(212, 164, 55, 0.3);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--colorprimario);
+}
+
+.btn-secondary:hover {
+  background: var(--colorprimario);
+  color: var(--colorfondo);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(160, 82, 45, 0.3);
+}
+
+/* Productos Destacados */
+.destacados {
+  text-align: center;
+  padding: 4rem 1rem;
+  background: var(--blanco);
+  position: relative;
+}
+
+.destacados::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    var(--colorprimario),
+    var(--colordetallesoro),
+    var(--colorsecundario)
+  );
+}
+
+.destacados-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.destacados-content a {
+  border: 3px solid var(--colorsecundario);
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1 / 1;
+  width: 340px;
+  height: 340px;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  background: var(--gris-suave);
+  position: relative;
+  overflow: hidden;
+}
+
+.destacados-content a::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    transparent 0%,
+    var(--colorsecundario) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.destacados-content a:hover {
+  border-color: var(--colordetallesoro);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(135, 169, 107, 0.2);
+}
+
+.destacados-content a:hover::before {
+  opacity: 0.1;
+}
+
+.destacados-content a img {
+  max-width: 80%;
+  max-height: 80%;
+  object-fit: contain;
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+
+.destacados-content a:hover img {
+  transform: scale(1.05);
+}
+
+/* Sobre nosotros */
+.about-us {
+  max-width: 1000px;
+  margin: auto;
+  padding: 4rem 1rem;
+  text-align: center;
+  background: var(--colorfondo);
+}
+
+.about-us p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: var(--colorprimario);
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 1.5rem;
+  width: 220px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  color: var(--colorsecundario);
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  font-size: 1rem;
+  color: var(--colorprimario);
+}
+
+/* Reseñas */
+.reviews {
+  margin: auto;
+  padding: 4rem 1rem 8rem 1rem;
+  text-align: center;
+  background: var(--blanco);
+}
+
+.reviews-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin: 3rem 0rem 2rem 0rem;
+}
+
+blockquote {
+  border-left: 4px solid var(--colordetallesrosa);
+  background: var(--gris-suave);
+  padding: 2rem;
+  border-radius: 8px;
+  font-style: italic;
+  max-width: 340px;
+  text-align: left;
+  position: relative;
+  box-shadow: 0 4px 16px rgba(196, 122, 109, 0.1);
+  transition: transform 0.3s ease;
+}
+
+blockquote:hover {
+  transform: translateY(-4px);
+}
+
+blockquote p {
+  font-size: 1.1rem;
+  color: var(--colorprimario);
+  margin-bottom: 1rem;
+  max-width: 750px;
+}
+
+blockquote cite {
+  font-weight: 500;
+  color: var(--colordetallesrosa);
+  font-style: normal;
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+}
+
+blockquote::before {
+  content: '"';
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  font-size: 4rem;
+  color: var(--colordetallesrosa);
+  opacity: 0.3;
+  font-family: "Playfair Display", serif;
+}
+
+/* Responsivo */
+@media (max-width: 932px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    min-height: auto;
+    padding: 3rem 1rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+    text-align: center;
+  }
+
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+
+  .hero-img {
+    max-width: 400px;
+  }
+
+  .destacados-content a {
+    width: 280px;
+    height: 280px;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  blockquote {
+    max-width: 100%;
+  }
+}
