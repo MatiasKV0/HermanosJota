@@ -1,26 +1,26 @@
 import './producto.css'
 
-export default function productos() {
+export default function Producto() {
     return (
-        <main className="producto">
-            <section class="producto">
+        <main classNameName="producto">
+            <section className="producto">
         
-        <div class="producto__media">
-          <figure class="producto__figure">
+        <div className="producto__media">
+          <figure className="producto__figure">
             <img id="p-img" src="" alt="Imagen del producto" />
           </figure>
         </div>
 
-        <div class="producto__info">
-          <h1 id="p-nombre" class="producto__titulo"></h1>
+        <div className="producto__info">
+          <h1 id="p-nombre" className="producto__titulo"></h1>
 
-          <div class="producto__panel">
-            <p id="p-descripcion" class="producto__descripcion"></p>
+          <div className="producto__panel">
+            <p id="p-descripcion" className="producto__descripcion"></p>
           </div>
 
-          <div class="producto__cantidad">
+          <div className="producto__cantidad">
             <h2 span="p-price"> Precio : </h2> 
-            <div class="cantidad__control">
+            <div className="cantidad__control">
               <input
                 type="number"
                 id="cantidad"
@@ -28,16 +28,16 @@ export default function productos() {
                 value="1"
                 min="1"
                 max="10"
-                class="cantidad-input"
+                className="cantidad-input"
               />
-              <button id="carrito" class="btn btn--primario">
+              <button id="carrito" className="btn btn--primario">
                 Añadir al carrito
               </button>
             </div>
           </div>
 
-          <div class="producto__panel">
-            <dl id="p-atributos" class="atributos"></dl>
+          <div className="producto__panel">
+            <dl id="p-atributos" className="atributos"></dl>
           </div>
         </div>
       </section>

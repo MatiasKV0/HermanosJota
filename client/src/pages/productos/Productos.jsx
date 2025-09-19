@@ -1,6 +1,6 @@
 import './productos.css'
 
-export default function productos() {
+export default function Productos() {
     return (
         <main className="productos">
             <div class="layout">
