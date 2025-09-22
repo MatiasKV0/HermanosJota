@@ -52,6 +52,7 @@ export default function Productos() {
               <li>MESAS</li>
               <li>ESCRITORIOS</li>
               <li>BIBLIOTECAS</li>
+              <li>CAMAS</li>
             </ul>
           </nav>
         </aside>

@@ -13,6 +13,7 @@ let productos = [
       peso: "68 kg",
       capacidad: "6 compartimentos interiores",
     },
+    categoria: "escritorio"
   },
   {
     nombre: "Biblioteca Recoleta",
@@ -28,6 +29,7 @@ let productos = [
       capacidad: "45 kg por estante",
       modulares: "5 estantes ajustables",
     },
+    categoria: "biblioteca"
   },
   {
     nombre: "Butaca Mendoza",
@@ -43,6 +45,7 @@ let productos = [
       tapizado: "Repelente al agua y manchas",
       confort: "Espuma alta densidad",
     },
+    categoria: "sillon"
   },
   {
     nombre: "Sillón Copacabana",
@@ -58,6 +61,7 @@ let productos = [
       rotacion: "360° silenciosa y suave",
       garantia: "10 años en estructura",
     },
+    categoria: "sillon"
   },
   {
     nombre: "Mesa de Centro Araucaria",
@@ -73,6 +77,7 @@ let productos = [
       peso: "42 kg",
       carga_maxima: "25 kg distribuidos",
     },
+    categoria: "mesa"
   },
   {
     nombre: "Mesa de Noche Aconcagua",
@@ -88,6 +93,7 @@ let productos = [
       almacenamiento: "1 cajón + repisa inferior",
       caracteristicas: "Cajón con cierre suave",
     },
+    categoria: "mesa"
   },
   {
     nombre: "Cama Neuquén",
@@ -103,6 +109,7 @@ let productos = [
       colchon: "Compatible con colchón 160x200",
       caracteristicas: "Cabecero flotante acolchado",
     },
+    categoria: "cama"
   },
   {
     nombre: "Sofá Patagonia",
@@ -118,6 +125,7 @@ let productos = [
       relleno: "Espuma HR + plumón reciclado",
       sostenibilidad: "Materiales 100% reciclables",
     },
+    categoria: "sillon"
   },
   {
     nombre: "Mesa Comedor Pampa",
@@ -133,6 +141,7 @@ let productos = [
       capacidad: "6-10 comensales",
       extension: "Sistema de mariposa central",
     },
+    categoria: "mesa"
   },
   {
     nombre: "Sillas Córdoba",
@@ -148,6 +157,7 @@ let productos = [
       apilables: "Hasta 6 sillas",
       incluye: "Set de 4 sillas",
     },
+    categoria: "silla"
   },
   {
     nombre: "Escritorio Costa",
@@ -163,6 +173,7 @@ let productos = [
       almacenamiento: "1 cajón con organizador",
       cables: "Pasacables integrado",
     },
+    categoria: "escritorio"
   },
   {
     nombre: "Silla de Trabajo Belgrano",
@@ -178,6 +189,7 @@ let productos = [
       regulacion: "Altura + inclinación respaldo",
       certificacion: "Ergonomía europea EN 1335",
     },
+    categoria: "silla"
   },
 ];
 
