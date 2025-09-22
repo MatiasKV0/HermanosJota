@@ -1,11 +1,15 @@
 import express from "express";
 import dotenv from "dotenv";
+import cors from "cors";
+
+import corsOptions from "./src/config/corsConfig.js";
 
 import productsRouter from "./src/routes/productsRouter.js";
 import printConsole from "./src/middleware/printConsole.js";
 import errorHandler from "./src/helpers/errorHandler.js";
 
 const app = express();
+app.use(cors(corsOptions));
 dotenv.config({ quiet: true });
 
 const PORT = process.env.PORT || 3000;
