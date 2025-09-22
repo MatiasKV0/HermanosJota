@@ -1,4 +1,4 @@
-const dominiosPermitidos = [process.env.FRONTEND_URL] || "http://localhost:5173";
+const dominiosPermitidos = [process.env.FRONTEND_URL || "http://localhost:5173"];
 
 const corsOptions = {
     origin: function (origin, callback) {
