@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import slugify from "../../utils/slugify";
+import { Link } from "react-router-dom";
 
 import "./productos.css";
 
@@ -52,6 +52,7 @@ export default function Productos() {
               <li>MESAS</li>
               <li>ESCRITORIOS</li>
               <li>BIBLIOTECAS</li>
+              <li>CAMAS</li>
             </ul>
           </nav>
         </aside>
@@ -76,21 +77,20 @@ export default function Productos() {
               {!loading &&
                 !response &&
                 data.map((p) => {
-                  const slug = slugify(p.nombre);
                   return (
-                    <a
+                    <Link
                       key={p.id}
-                      href={`/producto/${encodeURIComponent(slug)}`}
+                      to={`/producto/${p.id}`}
                       style={{ display: "block", width: "200px" }}
                     >
                       <img
-                        src={`/${p.imagen}`}
+                        src={`${url}/${p.imagen}`}
                         alt={p.nombre}
                         loading="lazy"
                         style={{ width: "100%", height: "auto" }}
                       />
                       <p style={{ margin: ".5rem 0 0" }}>{p.nombre}</p>
-                    </a>
+                    </Link>
                   );
                 })}
             </div>
