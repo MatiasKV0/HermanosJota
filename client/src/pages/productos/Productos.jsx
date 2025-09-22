@@ -1,9 +1,46 @@
-import './productos.css'
+import { useEffect, useState } from "react";
+import slugify from "../../utils/slugify";
+
+import "./productos.css";
 
 export default function Productos() {
-    return (
-        <main className="productos">
-            <div class="layout">
+  const url = import.meta.env.BACKEND_URL || "http://localhost:5000";
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [response, setResponse] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        setLoading(true);
+        setData([]);
+        window.scrollTo(0, 0);
+
+        const res = await fetch(`${url}/api/productos`);
+
+        if (!res.ok) {
+          throw new Error(`HTTP error! Status: ${res.status}`);
+        }
+
+        const results = await res.json();
+        const productos = Array.isArray(results)
+          ? results
+          : results.productos || [];
+
+        setData(productos);
+        setLoading(false);
+      } catch (error) {
+        setResponse("Ocurrió un error: " + error.message);
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, [url]);
+
+  return (
+    <main className="productos">
+      <div className="layout">
         <aside>
           <form>
             <input type="search" placeholder="Buscar..." />
@@ -18,13 +55,48 @@ export default function Productos() {
             </ul>
           </nav>
         </aside>
+
         <section>
           <div>
             <h1>Productos</h1>
-            <div id="container"></div>
+            <div
+              id="container"
+              style={{
+                display: "flex",
+                flexWrap: "wrap",
+                gap: "1rem",
+                justifyContent: "center",
+              }}
+            >
+              {loading && <p>Cargando productos...</p>}
+              {response && <p>{response}</p>}
+              {!loading && !response && data.length === 0 && (
+                <p>No hay productos para mostrar.</p>
+              )}
+              {!loading &&
+                !response &&
+                data.map((p) => {
+                  const slug = slugify(p.nombre);
+                  return (
+                    <a
+                      key={p.id}
+                      href={`/producto/${encodeURIComponent(slug)}`}
+                      style={{ display: "block", width: "200px" }}
+                    >
+                      <img
+                        src={`/${p.imagen}`}
+                        alt={p.nombre}
+                        loading="lazy"
+                        style={{ width: "100%", height: "auto" }}
+                      />
+                      <p style={{ margin: ".5rem 0 0" }}>{p.nombre}</p>
+                    </a>
+                  );
+                })}
+            </div>
           </div>
         </section>
       </div>
     </main>
-    )
+  );
 }
