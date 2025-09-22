@@ -3,7 +3,7 @@ let productos = [
     nombre: "Aparador Uspallata",
     descripcion:
       "Aparador de seis puertas fabricado en nogal sostenible con tiradores metálicos en acabado latón. Su silueta minimalista realza el veteado natural de la madera, creando una pieza que combina funcionalidad y elegancia atemporal para espacios contemporáneos.",
-    imagen: "public/img/AparadorUspallata.png",
+    imagen: "uploads/AparadorUspallata.png",
     id: 1001,
     precio: 200000,
     atributos: {
@@ -18,7 +18,7 @@ let productos = [
     nombre: "Biblioteca Recoleta",
     descripcion:
       "Sistema modular de estantes abierto que combina estructura de acero Sage Green y repisas en roble claro. Perfecta para colecciones y objetos de diseño, su diseño versátil se adapta a cualquier espacio contemporáneo con elegancia funcional.",
-    imagen: "public/img/BibliotecaRecoleta.png",
+    imagen: "uploads/BibliotecaRecoleta.png",
     id: 1002,
     precio: 120000,
     atributos: {
@@ -33,7 +33,7 @@ let productos = [
     nombre: "Butaca Mendoza",
     descripcion:
       "Butaca tapizada en bouclé Dusty Rose con base de madera de guatambú. El respaldo curvo abraza el cuerpo y ofrece máximo confort, mientras que su diseño orgánico aporta calidez y sofisticación a cualquier ambiente contemporáneo.",
-    imagen: "public/img/ButacaMendoza.png",
+    imagen: "uploads/ButacaMendoza.png",
     id: 1003,
     precio: 150000,
     atributos: {
@@ -48,7 +48,7 @@ let productos = [
     nombre: "Sillón Copacabana",
     descripcion:
       "Sillón lounge en cuero cognac con base giratoria en acero Burnt Sienna. Inspirado en la estética brasilera moderna de los 60, combina comodidad excepcional con un diseño icónico que trasciende tendencias y épocas.",
-    imagen: "public/img/SillonCopacabana.png",
+    imagen: "uploads/SillonCopacabana.png",
     id: 1004,
     precio: 165000,
     atributos: {
@@ -63,7 +63,7 @@ let productos = [
     nombre: "Mesa de Centro Araucaria",
     descripcion:
       "Mesa de centro con sobre circular de mármol Patagonia y base de tres patas en madera de nogal. Su diseño minimalista se convierte en el punto focal perfecto para cualquier sala de estar contemporánea, combinando la frialdad del mármol con la calidez de la madera.",
-    imagen: "public/img/MesaDeCentroAraucaria.png",
+    imagen: "uploads/MesaDeCentroAraucaria.png",
     id: 1005,
     precio: 110000,
     atributos: {
@@ -78,7 +78,7 @@ let productos = [
     nombre: "Mesa de Noche Aconcagua",
     descripcion:
       "Mesa de noche con cajón oculto y repisa inferior en roble certificado FSC®. Su diseño limpio y funcional permite convivir con diferentes estilos de dormitorio, ofreciendo almacenamiento discreto y elegante para objetos personales.",
-    imagen: "public/img/MesaDeNocheAconcagua.png",
+    imagen: "uploads/MesaDeNocheAconcagua.png",
     id: 1006,
     precio: 80000,
     atributos: {
@@ -93,7 +93,7 @@ let productos = [
     nombre: "Cama Neuquén",
     descripcion:
       "Cama plataforma con cabecero flotante tapizado en lino natural y estructura de madera maciza. Su diseño minimalista y sofisticado crea un ambiente de serenidad y elegancia, perfecto para dormitorios contemporáneos que buscan paz y simplicidad.",
-    imagen: "public/img/CamaNeuquen.png",
+    imagen: "uploads/CamaNeuquen.png",
     id: 1007,
     precio: 250000,
     atributos: {
@@ -108,7 +108,7 @@ let productos = [
     nombre: "Sofá Patagonia",
     descripcion:
       "Sofá de tres cuerpos tapizado en lino Warm Alabaster con patas cónicas de madera. Los cojines combinan espuma de alta resiliencia con plumón reciclado, ofreciendo comodidad duradera y sostenible para el hogar moderno.",
-    imagen: "public/img/SofaPatagonia.png",
+    imagen: "uploads/SofaPatagonia.png",
     id: 1008,
     precio: 300000,
     atributos: {
@@ -123,7 +123,7 @@ let productos = [
     nombre: "Mesa Comedor Pampa",
     descripcion:
       "Mesa extensible de roble macizo con tablero biselado y sistema de apertura suave. Su diseño robusto y elegante se adapta perfectamente a reuniones íntimas o grandes celebraciones familiares, extendiéndose de 6 a 10 comensales.",
-    imagen: "public/img/MesaComedorPampa.png",
+    imagen: "uploads/MesaComedorPampa.png",
     id: 1009,
     precio: 270000,
     atributos: {
@@ -138,7 +138,7 @@ let productos = [
     nombre: "Sillas Córdoba",
     descripcion:
       "Set de cuatro sillas apilables en contrachapado moldeado de nogal y estructura tubular pintada en Sage Green. Su diseño ergonómico y materiales de calidad garantizan comodidad y durabilidad en el uso diario, perfectas para comedores contemporáneos.",
-    imagen: "public/img/SillasCordoba.png",
+    imagen: "uploads/SillasCordoba.png",
     id: 1010,
     precio: 80000,
     atributos: {
@@ -153,7 +153,7 @@ let productos = [
     nombre: "Escritorio Costa",
     descripcion:
       "Escritorio compacto con cajón organizado y tapa pasacables integrada en bambú laminado. Ideal para espacios de trabajo en casa, combina funcionalidad moderna con estética minimalista y sostenible, perfecto para el trabajo remoto.",
-    imagen: "public/img/EscritorioCosta.png",
+    imagen: "uploads/EscritorioCosta.png",
     id: 1011,
     precio: 140000,
     atributos: {
@@ -168,7 +168,7 @@ let productos = [
     nombre: "Silla de Trabajo Belgrano",
     descripcion:
       "Silla ergonómica regulable en altura con respaldo de malla transpirable y asiento tapizado en tejido reciclado. Diseñada para largas jornadas de trabajo con máximo confort y apoyo lumbar, ideal para oficinas en casa y espacios de coworking.",
-    imagen: "public/img/SillaDeTrabajoBelgrano.png",
+    imagen: "uploads/SillaDeTrabajoBelgrano.png",
     id: 1012,
     precio: 160000,
     atributos: {
