@@ -9,7 +9,7 @@ export default function Producto() {
   const [response, setResponse] = useState(null);
   const [qty, setQty] = useState(1);
 
-  const url = import.meta.env.VITE_BACKEND_URL || "http://localhost:3000";
+  const url = import.meta.env.VITE_BACKEND_URL || "http://localhost:5000";
 
   useEffect(() => {
     let alive = true;
@@ -41,7 +41,7 @@ export default function Producto() {
 
   if (loading)
     return (
-      <main classname="producto">
+      <main className="producto">
         <p>Cargando...</p>
       </main>
     );
