@@ -1,17 +1,17 @@
 /* Main */
-h1 {
+.home h1 {
   font-size: 3rem;
   font-weight: 700;
   text-align: left;
 }
 
-h2 {
+.home h2 {
   font-size: 2.5rem;
   font-weight: 400;
   margin-bottom: 2rem;
 }
 
-p {
+.home p {
   font-weight: 400;
   font-size: 1.1rem;
   line-height: 1.6;
@@ -256,7 +256,7 @@ p {
   margin: 3rem 0rem 2rem 0rem;
 }
 
-blockquote {
+.reviews-content blockquote {
   border-left: 4px solid var(--colordetallesrosa);
   background: var(--gris-suave);
   padding: 2rem;
@@ -269,18 +269,18 @@ blockquote {
   transition: transform 0.3s ease;
 }
 
-blockquote:hover {
+.reviews-content blockquote:hover {
   transform: translateY(-4px);
 }
 
-blockquote p {
+.reviews-content blockquote p {
   font-size: 1.1rem;
   color: var(--colorprimario);
   margin-bottom: 1rem;
   max-width: 750px;
 }
 
-blockquote cite {
+.reviews-content blockquote cite {
   font-weight: 500;
   color: var(--colordetallesrosa);
   font-style: normal;
@@ -288,7 +288,7 @@ blockquote cite {
   letter-spacing: 0.02em;
 }
 
-blockquote::before {
+.reviews-content blockquote::before {
   content: '"';
   position: absolute;
   top: -10px;
@@ -330,7 +330,7 @@ blockquote::before {
     font-size: 2rem;
   }
 
-  blockquote {
+  .reviews-content blockquote {
     max-width: 100%;
   }
 }

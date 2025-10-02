@@ -1,9 +1,11 @@
+import DestacadosFetch from "../../components/DestacadosFetch";
+
 import "./carrito.css";
 
 export default function Carrito() {
   return (
-    <main className="carrito">
-      <h1 className="carrito">Tu Carrito</h1>
+    <main className="cart">
+      <h1>Tu Carrito</h1>
       <p className="cart-intro">
         Cada pieza seleccionada es una inversión en la belleza y funcionalidad
         de tu hogar
@@ -19,22 +21,21 @@ export default function Carrito() {
           <button
             className="checkout"
             id="cotizar"
-            onclick="cotizarProductos()"
+            onClick={()=>cotizarProductos()}
           >
             Solicitar Cotización
           </button>
         </div>
         <div>
-          <p className="empty-cart">
-            Tu carrito está vacío. Explora nuestros productos y agrega tus
-            favoritos.
-          </p>
+          <h2 className="empty-cart">
+            El carrito está vacío.
+          </h2>
         </div>
       </section>
       <section className="more-products">
         <h2>También te puede interesar</h2>
         <div className="products-container" id="products-container">
-          <p>Error al cargar los productos.</p>
+          <DestacadosFetch/>
         </div>
       </section>
     </main>

@@ -66,7 +66,7 @@ export default function Producto() {
   const imagen = product.imagen;
 
   return (
-    <main classNameName="producto">
+    <main className="producto">
       <section className="producto">
         <div className="producto__media">
           <figure className="producto__figure">
