@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import "./productos.css";
 
 export default function Productos() {
-  const url = import.meta.env.BACKEND_URL || "http://localhost:5000";
+  const url = import.meta.env.VITE_BACKEND_URL || "http://localhost:5000";
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [response, setResponse] = useState(null);
