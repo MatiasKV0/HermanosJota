@@ -1,8 +1,8 @@
-main {
+.productos {
   padding: 2.5rem 1.25rem 4rem;
 }
 
-.layout {
+.productos__layout {
   display: flex;
   gap: 2rem;
   max-width: 1200px;
@@ -10,20 +10,21 @@ main {
   align-items: flex-start;
 }
 
-aside {
+.productos__aside {
   flex: 0 0 260px;
   padding-top: 5.5rem;
 }
 
-aside form {
+.productos__aside form {
   display: flex;
   align-items: center;
   gap: 0.5rem;
   margin-bottom: 1rem;
 }
 
-aside input[type="search"] {
+.productos__aside input[type="search"] {
   width: 100%;
+  padding: 0.3rem 0rem;
   border: none;
   border-bottom: var(--colorprimario) 2px solid;
   background: transparent;
@@ -36,7 +37,7 @@ aside input[type="search"] {
   opacity: 0.7;
 }
 
-aside nav ul {
+.productos__aside nav ul {
   list-style: none;
   padding: 0;
   margin: 1rem 0 0;
@@ -45,7 +46,7 @@ aside nav ul {
   gap: 0.4rem;
 }
 
-aside nav li {
+.productos__aside nav li {
   font-size: 0.8rem;
   font: "Inter", sans-serif;
   letter-spacing: 0.08em;
@@ -54,16 +55,11 @@ aside nav li {
   width: fit-content;
 }
 
-section > div {
-  display: block !important;
-  margin-top: 0;
-}
-
-.layout section {
+.productos__layout section {
   flex: 1;
 }
 
-.layout section #container {
+.productos__layout section #productos__container {
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
@@ -71,7 +67,7 @@ section > div {
   margin-top: 1.5rem;
 }
 
-.layout section #container a {
+.productos__layout section #productos__container a {
   border: 2px var(--colorprimario) solid;
   border-radius: 8px;
   display: flex;
@@ -85,33 +81,33 @@ section > div {
   flex: 1 1 300px;
 }
 
-.layout section #container a img {
+.productos__layout section #productos__container a img {
   max-block-size: 80%;
   object-fit: contain;
   display: block;
   margin: auto;
 }
 
-.layout section #container a p {
+.productos__layout section #productos__container a p {
   display: none;
 }
 
 @media (max-width: 700px) {
-  .layout {
+  .productos__layout {
     display: block;
     max-width: 100vw;
     margin: 0;
     padding: 0;
   }
 
-  aside {
+  .productos__aside {
     width: 100%;
     padding-top: 0.5rem;
     padding-left: 0;
     margin-bottom: 1rem;
   }
 
-  .layout section #container a {
+  .productos__layout section #productos__container a {
     max-width: 320px;
   }
 }
