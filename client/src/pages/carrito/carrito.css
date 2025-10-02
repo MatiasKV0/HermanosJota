@@ -1,5 +1,5 @@
 /* Main Container */
-main {
+.cart {
   max-width: 1200px;
   margin: 0 auto;
   padding: 3rem 2rem;
@@ -8,7 +8,6 @@ main {
 .cart-intro {
   font-size: 1.2rem;
   color: var(--colorprimario);
-  font-style: italic;
   text-align: center;
   margin-bottom: 2rem;
 }
@@ -211,7 +210,6 @@ main {
 
 .more-products h2 {
   text-align: center;
-  margin-bottom: 3rem;
 }
 
 .products-container {
@@ -279,8 +277,7 @@ main {
 .empty-cart {
   text-align: center;
   padding: 4rem 2rem;
-  font-size: 1.1rem;
-  display: none;
+  font-size: 1.4rem;
 }
 
 .empty-cart h3 {
@@ -294,11 +291,11 @@ main {
 
 /* Responsive */
 @media (max-width: 768px) {
-  main {
+  .cart {
     padding: 2rem 1rem;
   }
 
-  h1 {
+  .cart h1 {
     font-size: 2rem;
   }
 
