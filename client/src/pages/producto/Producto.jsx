@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "./producto.css";
 
-export default function Producto() {
+export default function Producto({ addToCart }) {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -109,7 +109,15 @@ export default function Producto() {
               <button
                 id="carrito"
                 className="btn btn--primario"
-                onClick={() => alert(`Agregado "${nombre}" x ${qty}`)}
+                onClick={() => {
+                  addToCart({
+                    id: product.id,
+                    nombre: product.nombre,
+                    precio: product.precio,
+                    imagen: product.imagen,
+                    quantity: qty,
+                  });
+                }}
               >
                 Añadir al carrito
               </button>
