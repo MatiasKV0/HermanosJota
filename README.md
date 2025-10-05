@@ -87,7 +87,7 @@ root/
 │   ├── .env    
 │   ├── index.js    
 │   ├── package.json    
-│
+│      
 ├── client/    
 │   ├── public/    
 │   ├── src/    
