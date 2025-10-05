@@ -42,6 +42,7 @@ export default function ContactoForm() {
     e.preventDefault();
 
     if (validar()) {
+      console.log("Formulario enviado:", { nombre, email, mensaje });
       setExito(true);
 
       setNombre("");
@@ -95,7 +96,7 @@ export default function ContactoForm() {
 
       {exito && (
         <div id="successMessage" className="success-message">
-          ✅ ¡Mensaje enviado con éxito! <br />
+          ¡Mensaje enviado con éxito! <br />
           Pronto nos pondremos en contacto contigo.
         </div>
       )}

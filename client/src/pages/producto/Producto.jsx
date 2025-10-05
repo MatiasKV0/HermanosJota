@@ -73,9 +73,7 @@ export default function Producto() {
 
   const handleClick = () => {
     addToCart(product.id, qty);
-    setTimeout(() => {
-      navigate("/carrito");
-    }, 300);
+    navigate("/carrito");
   };
 
   return (
