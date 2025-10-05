@@ -1,14 +1,19 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
+import { useCart } from "../../context/cartContext";
 import "./producto.css";
 
 export default function Producto() {
   const { id } = useParams();
+  const { cart, addToCart } = useCart();
+
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [disponible, setDisponible] = useState(true);
   const [response, setResponse] = useState(null);
   const [qty, setQty] = useState(1);
 
+  const navigate = useNavigate();
   const url = import.meta.env.VITE_BACKEND_URL || "http://localhost:5000";
 
   useEffect(() => {
@@ -27,9 +32,7 @@ export default function Producto() {
           setResponse(null);
         }
       } catch (e) {
-        if (alive) {
-          setResponse("Ocurrió un error: " + e.message);
-        }
+        if (alive) setResponse("Ocurrió un error: " + e.message);
       } finally {
         if (alive) setLoading(false);
       }
@@ -39,31 +42,40 @@ export default function Producto() {
     };
   }, [id, url]);
 
+  useEffect(() => {
+    const productoEnCarrito = cart.find((p) => p.id === Number(id));
+    const cantidadActual = productoEnCarrito ? productoEnCarrito.quantity : 0;
+    if (qty === "" || (cantidadActual + qty === 99 && qty === 0)) {
+      setDisponible(false);
+    }
+    else {
+      setDisponible(cantidadActual + qty <= 99);
+    }
+  }, [cart, qty, id]);
+
   if (loading)
     return (
-      <main className="producto">
-        <p>Cargando...</p>
-      </main>
-    );
-  if (response) {
-    return (
-      <main className="producto">
-        <p>{response}</p>
-      </main>
-    );
-  }
-  if (!product)
-    return (
-      <main className="producto">
-        <p>No se encontró el producto.</p>
-      </main>
+      <p className="msg">Cargando...</p>
     );
 
-  const nombre = product.nombre;
-  const atributos = product.atributos;
-  const precio = product.precio;
-  const descripcion = product.descripcion;
-  const imagen = product.imagen;
+  if (response)
+    return (
+      <p className="msg">{response}</p>
+    );
+
+  if (!product)
+    return (
+      <p className="msg">Producto no encontrado.</p>
+    );
+
+  const { nombre, atributos, precio, descripcion, imagen } = product;
+
+  const handleClick = () => {
+    addToCart(product.id, qty);
+    setTimeout(() => {
+      navigate("/carrito");
+    }, 300);
+  };
 
   return (
     <main className="producto">
@@ -80,36 +92,41 @@ export default function Producto() {
         </div>
 
         <div className="producto__info">
-          <h1 id="p-nombre" className="producto__titulo">
-            {nombre}
-          </h1>
+          <h1 id="p-nombre" className="producto__titulo">{nombre}</h1>
 
           <div className="producto__panel">
-            <p id="p-descripcion" className="producto__descripcion">
-              {descripcion}
-            </p>
+            <p id="p-descripcion" className="producto__descripcion">{descripcion}</p>
           </div>
 
           <div className="producto__cantidad">
-            <h2>
-              <span id="p-price">Precio: </span> $
-              {Number(precio)?.toLocaleString("es-AR")}
-            </h2>
+            <div className="producto__precio">
+              <span id="p-available" style={{ color: disponible ? "var(--colorsecundario)" : "var(--colorprimario)" }}>
+                {disponible ? "Stock disponible" : "Stock no disponible"}
+              </span>
+              <h2 id="p-price">${Number(precio)?.toLocaleString("es-AR")}</h2>
+            </div>
+
             <div className="cantidad__control">
               <input
                 type="number"
                 id="cantidad"
                 name="cantidad"
                 value={qty}
-                min="1"
-                max="10"
+                min="0"
+                max="99"
                 className="cantidad-input"
-                onChange={(e) => setQty(Math.max(1, Number(e.target.value)))}
+                onChange={(e) => {
+                  const value = e.target.value;
+                  if (/^\d*$/.test(value)) {
+                    setQty(Number(value));
+                  }
+                }}
               />
               <button
                 id="carrito"
                 className="btn btn--primario"
-                onClick={() => alert(`Agregado "${nombre}" x ${qty}`)}
+                onClick={() => handleClick(Number(qty))}
+                disabled={!disponible || Number(qty) === 0 || qty === ""}
               >
                 Añadir al carrito
               </button>

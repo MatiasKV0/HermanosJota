@@ -151,6 +151,29 @@
   cursor: not-allowed;
 }
 
+
+.producto__precio {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.producto__precio span {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--colorsecundario);
+  margin: 0 10px 0 0;
+}
+
+#p-price {
+  display: flex;
+  font-size: 2rem;
+  text-align: right;
+  font-weight: 700;
+  color: var(--colorprimario);
+  margin: 0 0 10px;
+}
+
 @media (max-width: 768px) {
   .producto {
     flex-direction: column;

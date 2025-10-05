@@ -5,10 +5,10 @@ export default function ListaProductos({ url, data, loading, response }) {
     <div
       id="productos__container"
     >
-      {loading && <p>Cargando productos...</p>}
-      {response && <p>{response}</p>}
+      {loading && <p className="msg">Cargando productos...</p>}
+      {response && <p className="msg">{response}</p>}
       {!loading && !response && data.length === 0 && (
-        <p>No hay productos para mostrar.</p>
+        <p className="msg">No hay productos para mostrar.</p>
       )}
       {!loading &&
         !response &&

@@ -44,8 +44,8 @@ export default function DestacadosFetch() {
 
   return (
     <div className="destacados-content">
-      {data.map((producto) => (
-        <Link to={'/producto/'+producto.id}>
+      {data.map((producto, index) => (
+        <Link to={'/producto/'+producto.id} key={index}>
           <img src={url+'/'+producto.imagen} alt={producto.nombre} />
         </Link>
       ))}
