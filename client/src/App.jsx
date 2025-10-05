@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { CartProvider } from "./context/cartContext";
 import Layout from "./layout/Layout";
+import NotFound from "./components/NotFound";
 import Home from "./pages/home/Home";
 import Contacto from "./pages/contacto/Contacto";
 import ProductosContainer from "./pages/productos/ProductosContainer";
@@ -19,6 +20,7 @@ function App() {
             <Route path="/producto/:id" element={<Producto />} />
             <Route path="/contacto" element={<Contacto />} />
             <Route path="/carrito" element={<Carrito />} />
+            <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
       </BrowserRouter>
