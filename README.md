@@ -54,7 +54,7 @@ La estructura es monorepo, con dos carpetas principales:
     ```sh
     npm run dev
     ```
-El backend correrá en: `http://localhost:3000` (por defecto).
+El backend correrá en: `http://localhost:5000` (por defecto).
 
 ### Frontend
 1.  Entrar al directorio `client`:
