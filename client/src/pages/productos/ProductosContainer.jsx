@@ -35,7 +35,6 @@ export default function ProductosContainer() {
     fetchData();
   }, [url]);
 
-  // Filtrar por categoría y texto
   const productosFiltrados = data.filter((p) => {
     const coincideCategoria =
       !categoriaSeleccionada || p.categoria === categoriaSeleccionada;
