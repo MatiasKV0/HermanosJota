@@ -5,12 +5,12 @@ export default function ItemCart({item},index) {
   const { updateQuantity, removeFromCart } = useCart();
 
   const precioTotal = item.precio * item.quantity;
-  const baseUrl = import.meta.env.VITE_BACKEND_URL || "http://localhost:5000";
+  const urlImg = import.meta.env.VITE_BACKEND_URL_IMG || "http://localhost:5000/uploads";
 
   return (
     <div className="cart-item" key={index}>
       <img
-        src={`${baseUrl}/${item.imagen}`}
+        src={`${urlImg}${item.imagen}`}
         alt={item.nombre}
         className="item-image"
       />

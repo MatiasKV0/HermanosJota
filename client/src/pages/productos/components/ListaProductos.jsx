@@ -18,7 +18,7 @@ export default function ListaProductos({ url, data, loading, response }) {
             to={`/producto/${p.id}`}
           >
             <img
-              src={`${url}/${p.imagen}`}
+              src={`${url}${p.imagen}`}
               alt={p.nombre}
               loading="lazy"
             />

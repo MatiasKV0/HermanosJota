@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 export default function Hero() {
-  const url = import.meta.env.VITE_BACKEND_URL || "http://localhost:5000";
+  const urlImg = import.meta.env.VITE_BACKEND_URL_IMG || "http://localhost:5000/uploads";
 
   return (
     <section id="hero" className="hero">
@@ -15,7 +15,7 @@ export default function Hero() {
           </Link>
         </div>
         <img
-          src={url + "/uploads/AparadorUspallata.png"}
+          src={urlImg + "/AparadorUspallata.png"}
           alt="Aparador artesanal Hermanos Jota"
           className="hero-img"
         />

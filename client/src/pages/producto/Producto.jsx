@@ -15,6 +15,7 @@ export default function Producto() {
 
   const navigate = useNavigate();
   const url = import.meta.env.VITE_BACKEND_URL || "http://localhost:5000";
+  const urlImg = import.meta.env.VITE_BACKEND_URL_IMG || "http://localhost:5000/uploads";
 
   useEffect(() => {
     let alive = true;
@@ -84,7 +85,7 @@ export default function Producto() {
           <figure className="producto__figure">
             <img
               id="p-img"
-              src={`${url}/${imagen}`}
+              src={`${urlImg}${imagen}`}
               alt="Imagen del producto"
               loading="lazy"
             />
